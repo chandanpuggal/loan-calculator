@@ -1,0 +1,55 @@
+/* Custom CSS for Loan Prepayment vs Mutual Fund Calculator */
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Input Styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Form Focus Highlight Enhancement */
+input:focus, select:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Smooth Transition for UI Output Cards */
+#interestSavedDisplay, 
+#investmentValueDisplay, 
+#recommendationBanner {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Chart Canvas Wrapper Adjustments */
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+/* Print Optimization (for users saving their comparison) */
+@media print {
+    body {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 0;
+    }
+
+    button, #calcForm {
+        display: none !important;
+    }
+
+    .shadow-sm {
+        box-shadow: none !important;
+        border: 1px solid #e2e8f0;
+    }
+}
